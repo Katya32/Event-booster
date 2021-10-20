@@ -1,7 +1,7 @@
 const API_KEY= "9tvGazI5GRqdFrE6bp2dWyynwysgf3qO";
 const BASE_URL = "https://app.ticketmaster.com/discovery/v2/";
-import firebase from 'firebase/app';
-import 'firebase/database';
+// import firebase from 'firebase/app';
+// import 'firebase/database';
 
 export class apiService {
     constructor() {

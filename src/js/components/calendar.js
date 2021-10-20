@@ -8,7 +8,6 @@ const onOpenCalendar = (e) => {
 }
 
 const onCloseCalendar = (e) => {
-    console.log(e.target.classList.contains('icon-close-calender'));
     if (e.target.classList.contains('icon-close-calender')){
         refs.calendar.classList.add('hide-calendar');
     }

@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://Katya32.github.io/Event-booster",
+  "homepage": "https://katya32.github.io/Event-booster/",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /Event-booster/",
@@ -18,7 +18,7 @@
   "author": "Dream Team",
   "license": "ISC",
   "bugs": {
-    "url": "hhttps://github.com/Katya32/Event-booster"
+    "url": "https://github.com/Katya32/Event-booster"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",

@@ -2,9 +2,9 @@ import { refs } from "../refs";
 import { apiService } from "./Api";
 import eventsCards from "../../templates/events.hbs";
 import Notiflix from "notiflix";
-import firebase from 'firebase/app';
+// import firebase from 'firebase/app';
 import { observer } from "./infiniteScroll";
-import 'firebase/auth';
+// import 'firebase/auth';
 import { flatMapDeep, map, some } from "lodash";
 
 export const event = new apiService();
@@ -20,7 +20,7 @@ export const onEvent = (e) => {
         Notiflix.Loading.dots(); 
         eventMarkup(event);
         console.log(event);
-        checkAuth(); 
+        // checkAuth(); 
         Notiflix.Loading.remove(); 
         refs.topEvents.classList.add("hide-title"); 
         observer.observe(refs.sentinel);
@@ -52,14 +52,14 @@ export function eventMarkup(event) {
   refs.eventsList.innerHTML = eventsCards(event);
 }
 
-export function checkAuth() {
-  firebase.auth().onAuthStateChanged(
-    (user) => { 
-      if (user) { 
-        document.querySelectorAll('#favorite').forEach(el => el.style.opacity = 1);
-        } else if (!user) {
-          document.querySelectorAll('#favorite').forEach(el => el.style.opacity = 0);
-        }
-    }   
-  )
-}
+// export function checkAuth() {
+//   firebase.auth().onAuthStateChanged(
+//     (user) => { 
+//       if (user) { 
+//         document.querySelectorAll('#favorite').forEach(el => el.style.opacity = 1);
+//         } else if (!user) {
+//           document.querySelectorAll('#favorite').forEach(el => el.style.opacity = 0);
+//         }
+//     }   
+//   )
+// }

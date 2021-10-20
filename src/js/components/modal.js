@@ -3,7 +3,7 @@ import eventCardModal from '../../templates/eventModal.hbs'
 import { event } from "./markupCards";
 //import {initMap} from "../../index.html"
 
- export const idArray= []
+//  export const idArray= []
 function closeModal(e) {
     
 if(e.target.closest('button') || e.target.classList.contains("js-lightbox")){
@@ -19,19 +19,19 @@ if(e.target.closest('button') || e.target.classList.contains("js-lightbox")){
 export function openModal(e) {
     const id = e.target.offsetParent.dataset.id;
 
-    if (e.target.id === 'favorite') {
-        if (e.target.classList.contains("isAdded")) {
-            const index = idArray.indexOf(id)
-            idArray.splice(index, 1)
-            localStorage.setItem('id', idArray)
-            e.target.classList.remove('isAdded')
-            return
-        }
-        idArray.push(id);
-        localStorage.setItem('id', idArray)
-        e.target.classList.add('isAdded')
-        return
-    }
+    // if (e.target.id === 'favorite') {
+    //     if (e.target.classList.contains("isAdded")) {
+    //         const index = idArray.indexOf(id)
+    //         idArray.splice(index, 1)
+    //         localStorage.setItem('id', idArray)
+    //         e.target.classList.remove('isAdded')
+    //         return
+    //     }
+    //     idArray.push(id);
+    //     localStorage.setItem('id', idArray)
+    //     e.target.classList.add('isAdded')
+    //     return
+    // }
 
     if ( e.target.classList.contains("location")){
         const longitude = parseFloat(e.target.dataset.long);
@@ -67,7 +67,7 @@ function markupEventCard(obj) {
 
 refs.lightboxBackdrop.addEventListener('click', closeModal)
 refs.eventsList.addEventListener('click', openModal)
-refs.local.addEventListener('click', closeMap)
+// refs.local.addEventListener('click', closeMap)
 export let local
 
 

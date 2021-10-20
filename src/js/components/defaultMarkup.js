@@ -3,7 +3,7 @@ import refs from "../refs";
 import { checkAuth, event } from "./markupCards";
 import Notiflix from "notiflix";
 import { observer } from "./infiniteScroll";
-import 'firebase/auth';
+// import 'firebase/auth';
 
 export function defaultMarkup() {
  Notiflix.Loading.dots();
@@ -11,7 +11,7 @@ export function defaultMarkup() {
             refs.eventsList.innerHTML = eventsCards(event);
             observer.disconnect();
             Notiflix.Loading.remove()
-            checkAuth()
+            // checkAuth()
         }).catch(err => {console.log("err :" >> err)})
 }
 
